@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import getCountries from "../services/api.js"
+import {getCountries, getCapitals} from "../services/api.js"
 
 const GameContext = createContext(null);
 
@@ -10,6 +10,7 @@ export const GameProvider = ({ children }) => {
     const [hints, setHints] = useState(0)
     const [currentCountry, setCurrentCountry] = useState('')
     const [countries, setCountries] = useState([])
+    const [capitals, setCapitals] = useState([])
     const [currentUser, setCurrentUser] = useState(null)
     const [leaderboard, setleaderboard] = useState([])
     const [hintedName, setHintedName] = useState('')
@@ -21,7 +22,12 @@ export const GameProvider = ({ children }) => {
             setCountries(await getCountries())
         }
 
+        const getCapitalsApi = async () => {
+            setCapitals(await getCapitals())
+        }
+
         getCountriesApi()
+        getCapitalsApi()
 
         if (localStorage.getItem("leaderboard") != null) {
             setleaderboard(JSON.parse(localStorage.getItem("leaderboard")))
@@ -100,7 +106,7 @@ export const GameProvider = ({ children }) => {
 
     const login = (username) => {
         setCurrentUser(username)
-        localStorage.setItem("user", JSON.stringify(currentUser))
+        localStorage.setItem("user", JSON.stringify(username))
     }
     const logout = () => {
         setCurrentUser(null)
