@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const getXpics = async () => {
+export const getCountries = async () => {
     try {
       const response = await axios.get(
         `https://countriesnow.space/api/v0.1/countries/flag/images`
@@ -10,6 +10,5 @@ export const getXpics = async () => {
       
     } catch (error) {
       return error
-      
     }
   };
