@@ -1,0 +1,22 @@
+.timer-panel {
+  min-height: 160px;
+}
+
+.timer-panel h2 {
+  margin-top: 0;
+}
+
+.timer-value {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.05);
+  color: #eef7ff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+}

@@ -9,20 +9,8 @@ export const getCountries = async () => {
     return response.data
 
   } catch (error) {
-    return error
-  }
-};
-
-export const getCapitals = async () => {
-  try {
-    const response = await axios.get(
-      `https://countriesnow.space/api/v0.1/countries/capital`
-    );
-
-    return response.data
-
-  } catch (error) {
-    return error
+    console.error('Error cargando países:', error);
+    return [];
   }
 };
 

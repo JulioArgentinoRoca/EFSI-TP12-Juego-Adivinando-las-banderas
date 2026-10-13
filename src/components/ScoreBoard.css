@@ -1,0 +1,13 @@
+.score-panel {
+  min-height: 160px;
+}
+
+.score-panel h2 {
+  margin-top: 0;
+}
+
+.score-value {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+}

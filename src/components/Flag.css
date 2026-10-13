@@ -1,0 +1,21 @@
+.flag-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+}
+
+.flag-image {
+  width: min(100%, 560px);
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.clue-text {
+  margin: 1rem 0 0;
+  letter-spacing: 0.1em;
+  font-size: 1.2rem;
+  text-align: center;
+}
